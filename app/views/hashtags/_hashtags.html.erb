@@ -1,0 +1,10 @@
+<ul class="list-unstyled">
+  <% hashtags.each do |hashtag| %>
+    <li class="media mb-3">
+        <div>
+          <p><%= hashtag.content %></p>
+        </div>
+    </li>
+  <% end %>
+  <%= paginate hashtags %>
+</ul>

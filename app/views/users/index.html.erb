@@ -1,2 +1,16 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>RandomTag</h1>
+    <button>RandomTag</button>
+    <button>Copy</button><br>
+    <textarea rows="5" cols="50"></textarea>
+    
+
+    <%= form_with(model: @hashtag, local: true) do |f| %>
+        <%= f.submit 'Add Tag', class: 'btn btn-primary btn-sm' %>
+        <div class="form-group">
+        <%= f.text_area :content, class: 'form-control', rows: 1 %>
+        </div>
+    <% end %>
+ <h2>My Tag</h2>
+  <%= render 'hashtags/hashtags', hashtags: @hashtags %>
+    
+    

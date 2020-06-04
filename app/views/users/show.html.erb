@@ -1,9 +1,4 @@
-<h1>RandomTag</h1>
-    <button>RandomTag</button>
-    <button>Copy</button>
-    
-    
-    <h2>My Tag</h2>
-    <button>Add Tag</button>
-    <textinput></textinput>
-    
+<h1>User Page</h1>
+<p>User Name</p><%= current_user.name %>
+<p>Email</p><%= current_user.email %><br>
+<%= link_to 'Update My profile', edit_user_path(current_user) %></li>
