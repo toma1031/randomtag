@@ -14,7 +14,8 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :show, :new, :create, :edit, :update]
     
     
-    resources :hashtags, only: [:create, :destroy] do 
-      get 'hashtags/randomtag'
-    end
+    resources :hashtags, only: [:create, :destroy, :show] 
+    # do 
+    #   get 'hashtags/randomtag'
+    # end
 end

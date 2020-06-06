@@ -5,6 +5,11 @@ class UsersController < ApplicationController
     if logged_in?
       @hashtag = current_user.hashtags.build  # form_with 用
       @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
+      if params[:hashtag].nil?
+        @randomtags = Hashtag.order("RAND()").limit(28)
+      else
+        @randomtags = Hashtag.order("RAND()").limit(params[:hashtag][:hashtags])
+      end
     end
   end
 
@@ -46,5 +51,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
-  
 end

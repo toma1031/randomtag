@@ -1,7 +1,11 @@
-<h1>RandomTag</h1>
-    <button>RandomTag</button>
-    <button>Copy</button><br>
-    <textarea rows="5" cols="50"></textarea>
+<%= form_with(model: @hashtag, url: users_path, method: :get, local: true) do |f| %>
+        <%= f.submit 'RandomTag', class: 'btn btn-primary btn-sm' %>    
+        <button>Copy</button>
+        <%= f.label :"Set Number" %>
+        <%= f.select :hashtags, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"]] ,class:"form-control" %>
+        <%= render 'randomtags/randomtags', randomtags: @randomtags %>
+        <% end %>
+
     
 
     <%= form_with(model: @hashtag, local: true) do |f| %>

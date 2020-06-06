@@ -4,6 +4,11 @@
         <div>
           <p><%= hashtag.content %></p>
         </div>
+    <div>
+      <% if current_user == hashtag.user %>
+        <%= link_to "X", hashtag, method: :delete,  class: 'btn btn-danger btn-sm' %>
+      <% end %>
+    </div>
     </li>
   <% end %>
   <%= paginate hashtags %>
