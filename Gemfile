@@ -55,3 +55,6 @@ gem 'kaminari'
 
 gem 'pry-byebug', group: :development
 
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+gem 'clipboard-rails'

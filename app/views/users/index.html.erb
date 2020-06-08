@@ -1,11 +1,22 @@
+
+
 <%= form_with(model: @hashtag, url: users_path, method: :get, local: true) do |f| %>
         <%= f.submit 'RandomTag', class: 'btn btn-primary btn-sm' %>    
-        <button>Copy</button>
+        <!--<div>-->
+            <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
+                Copy
+            </button>
+        <!--</div>-->
+        
         <%= f.label :"Set Number" %>
-        <%= f.select :hashtags, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"]] ,class:"form-control" %>
-        <%= render 'randomtags/randomtags', randomtags: @randomtags %>
-        <% end %>
-
+        <%= f.select :hashtags, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"]] ,class:"form-control" %><br>
+<% end %>
+        
+            <!-- Target -->
+            <div id="bar">
+                <%= render 'randomtags/randomtags', randomtags: @randomtags %>
+            </div>
+            <!-- Trigger -->
     
 
     <%= form_with(model: @hashtag, local: true) do |f| %>
