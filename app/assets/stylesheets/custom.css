@@ -1,9 +1,147 @@
+.navbar-brand {
+    font-weight: bold;
+    font-size: 30px;
+}
 
+p {
+    display: inline;
+    font-size: 20px;
 
-.r { background-color: pink; 
+}
+
+p2 {
+    display: inline;
+    font-size: 20px;
+
+}
+
+.setnumber {
+    display:inline;
+}
+
+.r {  
     display: inline;
 }
 
-.hogehoge { background-color: pink; 
+.hogehoge { 
+    background-color: #DDDDDD; 
+    padding-left: 5px;
+    border-radius: 5px;
     display: inline-block;
+}
+
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #005FFF;/*文字色*/
+    background: #FFF;
+    border: solid 3px #005FFF;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box3 {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    font-weight: bold;
+    color: #005FFF;/*文字色*/
+    background: #FFF;
+    border: solid 3px #005FFF;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+h3 {
+    color:#005FFF;
+}
+
+.mytag {
+    display: flex;
+}
+
+.mytags {
+  justify-content: space-between;
+  display: flex;
+  
+}
+
+.addtag {
+    display: flex;
+    float: right;
+}
+
+.textarea {
+    display: flex;
+    float: right;
+}
+
+.btn1 {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: #005FFF; 
+    color: white; 
+}
+
+.btn-primary:hover, .btn-primary:focus, 
+.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary, 
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus, 
+.open > .dropdown-toggle.btn-primary.focus,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
+    background: #75A9FF; 
+    color: white; 
+}
+
+.btn-danger {
+        background: #005FFF; 
+    color: white; 
+}
+
+.btn-primary:hover, .btn-primary:focus, 
+.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary, 
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus, 
+.open > .dropdown-toggle.btn-primary.focus,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
+    background: #75A9FF; 
+    color: white; 
+}
+
+.btn2 {
+    padding: 4px 4px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 300px) {
+  /* ウインドウ幅300px以上の時に適用されるスタイル */
+    .setnumber {
+    display:block;
+  }
+}
+
+@media (min-width: 500px) {
+  /* ウインドウ幅500px以上の時に適用されるスタイル */
+    .setnumber {
+    display: inline;
+  }
 }

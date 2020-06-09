@@ -15,7 +15,6 @@
 //
 
 // = require jquery
-// = require jquery.turbolinks
 // = require rails-ujs
 // = require turbolinks
 // = require clipboard

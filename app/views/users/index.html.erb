@@ -1,31 +1,42 @@
-
-
-<%= form_with(model: @hashtag, url: users_path, method: :get, local: true) do |f| %>
-        <%= f.submit 'RandomTag', class: 'btn btn-primary btn-sm' %>    
+<div id="samplRemote">
+<%= form_with(model: @hashtag, url: users_path, method: :get, local: true, remote: true) do |f| %>
+        <%= f.submit 'RandomTag', class: 'btn1 btn-primary btn-sm' %>    
         <!--<div>-->
-            <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
+            <button class="clipboard-btn btn1 btn-primary btn-sm" data-clipboard-action="copy" data-clipboard-target="#bar">
                 Copy
             </button>
         <!--</div>-->
-        
+        <div class = "setnumber">
         <%= f.label :"Set Number" %>
-        <%= f.select :hashtags, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"]] ,class:"form-control" %><br>
+        </div>
+        <%= f.select :hashtags, 1.upto(30).map{|i| [i, i]}, class:"form-control" %><br>
 <% end %>
-        
+</div>       
             <!-- Target -->
-            <div id="bar">
-                <%= render 'randomtags/randomtags', randomtags: @randomtags %>
+            <div class="box2" id="bar">
+                <p><%= render 'randomtags/randomtags', randomtags: @randomtags %></p>
             </div>
             <!-- Trigger -->
     
-
-    <%= form_with(model: @hashtag, local: true) do |f| %>
-        <%= f.submit 'Add Tag', class: 'btn btn-primary btn-sm' %>
-        <div class="form-group">
-        <%= f.text_area :content, class: 'form-control', rows: 1 %>
-        </div>
+<div class="mytags">
+  <div class="mytag">
+    <h3>My Tag</h3>
+  </div>
+  <div class="mytag">
+    <%= form_with(model: @hashtag, local: true, remote: true) do |f| %>
+     <div class = "addtag">
+      <%= f.submit 'Add Tag'%>
+     </div> 
+      <!--<div class="form-group">-->
+      <div class = "textarea">
+        <%= f.text_area :content, rows: 1 %>
+      </div>    
+      <!--</div>-->
     <% end %>
- <h2>My Tag</h2>
+  </div>
+</div>
+
+ <div class="box3">
   <%= render 'hashtags/hashtags', hashtags: @hashtags %>
-    
+ </div> 
     
