@@ -7,17 +7,17 @@ class UsersController < ApplicationController
       @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
       if params[:hashtag].nil?
         @randomtags = Hashtag.order("RAND()").limit(28)
-        # Ajax
-          # respond_to do |format|
-          #   # format.html
-          #   format.js
-          # end
-        # Ajax
+        # # Ajax
+        #   respond_to do |format|
+        #     format.html
+        #     format.js
+        #   end
+        # # Ajax
       else
         @randomtags = Hashtag.order("RAND()").limit(params[:hashtag][:hashtags])
         # # Ajax
         #   respond_to do |format|
-        #     # format.html
+        #     format.html
         #     format.js
         #   end
         # # Ajax

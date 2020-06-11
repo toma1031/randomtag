@@ -58,3 +58,7 @@ gem 'pry-byebug', group: :development
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'clipboard-rails'
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end

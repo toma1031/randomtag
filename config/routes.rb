@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
+  get 'hashtags/index'
+  post 'hashtags/index'
     root to: 'toppages#index'
     
     get 'login', to: 'sessions#new'
@@ -15,7 +17,5 @@ Rails.application.routes.draw do
     
     
     resources :hashtags, only: [:create, :destroy, :show] 
-    # do 
-    #   get 'hashtags/randomtag'
-    # end
+
 end
