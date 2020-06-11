@@ -6,7 +6,9 @@ class UsersController < ApplicationController
       @hashtag = current_user.hashtags.build  # form_with 用
       @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
       if params[:hashtag].nil?
-        @randomtags = Hashtag.order("RAND()").limit(28)
+        # @randomtags = Hashtag.order("RAND()").limit(28) mySQL用
+        # Postgresql & Heroku用
+        @randomtags = Hashtag.order("RANDOM()").limit(28)
         # # Ajax
         #   respond_to do |format|
         #     format.html
@@ -14,7 +16,9 @@ class UsersController < ApplicationController
         #   end
         # # Ajax
       else
-        @randomtags = Hashtag.order("RAND()").limit(params[:hashtag][:hashtags])
+        # @randomtags = Hashtag.order("RAND()").limit(params[:hashtag][:hashtags]) mySQL用
+        # Postgresql & Heroku用
+        @randomtags = Hashtag.order("RANDOM()").limit(params[:hashtag][:hashtags])
         # # Ajax
         #   respond_to do |format|
         #     format.html
