@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       # render template: "users/index"
       redirect_to users_url
     else
-      flash.now[:danger] = 'Failed'
+      flash.now[:danger] = 'Failed login'
       render :new
     end
   end

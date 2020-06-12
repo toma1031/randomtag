@@ -1,5 +1,5 @@
 class Hashtag < ApplicationRecord
     belongs_to :user
     
-    validates :content, presence: true, length: { maximum: 255 }
+    validates :content, presence: true, length: { maximum: 30 }
 end

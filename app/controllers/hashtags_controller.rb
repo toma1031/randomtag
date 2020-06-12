@@ -9,7 +9,7 @@ class HashtagsController < ApplicationController
       redirect_to users_url
     else
       @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
-      flash[:danger] = 'Input '
+      flash[:danger] = 'Please input tag less than 30 characters'
       redirect_to users_url
     end
   end
