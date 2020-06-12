@@ -15,9 +15,7 @@ p2 {
 
 }
 
-.setnumber {
-    display:inline;
-}
+
 
 .r {  
     display: inline;
@@ -58,6 +56,29 @@ h3 {
     color:#005FFF;
 }
 
+#wrapper {
+    height: 50px;
+    display: flex;
+}
+
+.button {
+    display: inline-block;
+    /*width: 100px;*/
+     width: 150px;
+}
+
+.button2 {
+    display: inline-block;
+    /*width: 170px;*/
+     width: 170px;
+}
+
+.setnumber {
+    padding-left:10px;
+    display: inline-block;
+    
+}
+
 .mytag {
     display: flex;
 }
@@ -89,6 +110,7 @@ h3 {
 .btn-primary {
     background: #005FFF; 
     color: white; 
+    display: flex;
 }
 
 .btn-primary:hover, .btn-primary:focus, 
@@ -137,6 +159,12 @@ h3 {
     .setnumber {
     display:block;
   }
+/*  .btn-primary {*/
+/*    background: #005FFF; */
+/*    color: white; */
+/*    display: flex;*/
+/*    width: 90px;*/
+/*}*/
 }
 
 @media (min-width: 500px) {
@@ -144,4 +172,22 @@ h3 {
     .setnumber {
     display: inline;
   }
+    .btn-primary {
+    background: #005FFF; 
+    color: white; 
+    /*display: flex;*/
+    /*width: 100%;*/
+}
+
+.button {
+    display: inline-block;
+    /*width: 100px;*/
+     width: 120px;
+}
+
+.button2 {
+    display: inline-block;
+    /*width: 170px;*/
+     width: 170px;
+}
 }

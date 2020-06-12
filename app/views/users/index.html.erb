@@ -1,18 +1,22 @@
-
-    <%= form_with(model: @hashtag, url: users_path, method: :get, local: true) do |f| %>
-            <%= f.submit 'RandomTag', class: 'btn1 btn-primary btn-sm' %>    
-            <!--<div>-->
-            
-                <button class="clipboard-btn btn1 btn-primary btn-sm" data-clipboard-action="copy" data-clipboard-target="#bar">
-                    Copy
-                </button>
-            <!--</div>-->
-            <div class = "setnumber">
-            <%= f.label :"Set Number" %>
-            </div>
-            <%= f.select :hashtags, 1.upto(30).map{|i| [i, i]}, class:"form-control" %><br>
-    <% end %>
+<div id="wrapper">
+    <!--ボタン-->
+    <div class ="button">
+        <button class="clipboard-btn btn1 btn-primary btn-sm" data-clipboard-action="copy" data-clipboard-target="#bar">
+            Copy
+        </button>
+    </div>
+    <!--ボタン-->
+    <div class ="button2">
+        <%= form_with(model: @hashtag, url: users_path, method: :get, local: true) do |f| %>
+                <%= f.submit 'RandomTag', class: 'btn1 btn-primary btn-sm' %>    
+    </div>
+                <div class = "setnumber">
+                <%= f.label :"Set Number" %>
+                <%= f.select :hashtags, 1.upto(30).map{|i| [i, i]}, class:"form-control" %><br>
+                </div>
+        <% end %>
     
+</div>
             <!-- Target -->
             
             <div class="box2" id="bar">
