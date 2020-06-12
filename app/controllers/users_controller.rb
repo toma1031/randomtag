@@ -6,9 +6,10 @@ class UsersController < ApplicationController
       @hashtag = current_user.hashtags.build  # form_with 用
       @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
       if params[:hashtag].nil?
-        # @randomtags = Hashtag.order("RAND()").limit(28) mySQL用
-        # Postgresql & Heroku用
-        @randomtags = Hashtag.order("RANDOM()").limit(28)
+        # mySQL用
+        @randomtags = current_user.hashtags.order("RAND()").limit(28)
+        # # Postgresql & Heroku用
+        # @randomtags = current_user.hashtags.order("RANDOM()").limit(28)
         # # Ajax
         #   respond_to do |format|
         #     format.html
@@ -16,9 +17,10 @@ class UsersController < ApplicationController
         #   end
         # # Ajax
       else
-        # @randomtags = Hashtag.order("RAND()").limit(params[:hashtag][:hashtags]) mySQL用
-        # Postgresql & Heroku用
-        @randomtags = Hashtag.order("RANDOM()").limit(params[:hashtag][:hashtags])
+        # mySQL用
+        @randomtags = current_user.hashtags.order("RAND()").limit(params[:hashtag][:hashtags])
+        # # Postgresql & Heroku用
+        # @randomtags = current_user.hashtags.order("RANDOM()").limit(params[:hashtag][:hashtags])
         # # Ajax
         #   respond_to do |format|
         #     format.html
@@ -40,10 +42,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
-    flash[:success] = 'ユーザを登録しました。'
+    flash[:success] = 'Succeeded!'
     redirect_to @user
     else
-    flash.now[:danger] = 'ユーザの登録に失敗しました。'
+    flash.now[:danger] = 'Failed'
     render :new
     end
   end

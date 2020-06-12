@@ -9,7 +9,7 @@ class HashtagsController < ApplicationController
       redirect_to users_url
     else
       @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
-      flash.now[:danger] = 'hashtagの投稿に失敗しました。'
+      flash[:danger] = 'Input '
       redirect_to users_url
     end
   end
