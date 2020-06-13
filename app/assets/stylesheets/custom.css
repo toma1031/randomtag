@@ -111,7 +111,9 @@ h3 {
     background: #005FFF; 
     color: white; 
     display: flex;
+    text-align: center;
 }
+
 
 .btn-primary:hover, .btn-primary:focus, 
 .btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
