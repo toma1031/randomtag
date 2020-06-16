@@ -7,5 +7,5 @@ class User < ApplicationRecord
     
     
     has_secure_password
-    has_many :hashtags
+    has_many :hashtags, dependent: :destroy
 end
