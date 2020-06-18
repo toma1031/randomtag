@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     if logged_in?
       @hashtag = current_user.hashtags.build  # form_with 用
-      @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
+      @hashtags = current_user.hashtags.order(id: :desc)
       if params[:hashtag].nil?
         # # mySQL用
         # @randomtags = current_user.hashtags.order("RAND()").limit(28)

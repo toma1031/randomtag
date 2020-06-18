@@ -1,6 +1,6 @@
 <ul class="list-unstyled">
   <% hashtags.each do |hashtag| %>
-    <li class="hogehoge mb-3">
+    <div class="hogehoge mb-3">
         <!--<div>-->
           <span><%= hashtag.content %></span>
         <!--</div>-->
@@ -9,7 +9,6 @@
             <%= link_to "X", hashtag, method: :delete,  class: 'btn2 btn-danger btn-sm' %>
           <% end %>
         <!--</div>-->
-    </li>
+    </div>
   <% end %>
-<!--  <%= paginate hashtags %>-->
 </ul>
