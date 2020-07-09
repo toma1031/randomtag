@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if login(email, password)
       flash[:success] = 'Loged in!'
       # render template: "users/index"
-      redirect_to users_url
+      redirect_to top_url
     else
       flash.now[:danger] = 'Failed log'
       render :new

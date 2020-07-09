@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   post 'hashtags/index'
     root to: 'users#index'
     
+    
     get 'login', to: 'sessions#new'
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'
     
+    get 'top', to: 'users#index'
     get 'signup', to: 'users#new'
     resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy]
     
