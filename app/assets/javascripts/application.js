@@ -23,13 +23,10 @@
 
 
 
-$(document).ready(function(){  
-  
+document.addEventListener("turbolinks:load", function() { 
   var clipboard = new Clipboard('.clipboard-btn');
   console.log(clipboard);
-	
 });
-
 
 
 

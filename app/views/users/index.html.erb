@@ -7,7 +7,7 @@
     </div>
     <!--ボタンここまで-->
     <div class ="button2">
-        <%= form_with(model: @hashtag, url: users_path, method: :get, local: true) do |f| %>
+        <%= form_with(model: @hashtag, url: root_path, method: :get, local: true) do |f| %>
                 <%= f.submit 'RandomTag', class: 'btn1 btn-primary btn-sm' %>    
   
     <!--<div class = "setnumber">-->
