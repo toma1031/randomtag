@@ -1,9 +1,9 @@
 # Randomtag
 
-"Randomtag" is a web service that people can make favorite hashtags.
-You can save your favorite hashtags and make them randomly.
+"Randomtag" is a web service that Users can make favorite hashtags.
+Users can save your favorite hashtags and make them randomly.
 Use for marketing.
-Especially, on Instagram, you will be shadowbanned if you post the same hashtags every day.
+Especially, on Instagram, Users will be shadowbanned if Users posts the same hashtags every day.
 This application helps you to prevent it.
 
 # Requirement
