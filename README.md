@@ -30,6 +30,8 @@ Put your hashtags and click "add".
 You can save hashtags.
 After that, choose tags numbers and click random button and copy.
 
+README.png
+
 # Author
 
 * Akinori Toma
