@@ -5,10 +5,8 @@ class HashtagsController < ApplicationController
   def create
     @hashtag = current_user.hashtags.build(hashtag_params)
     if @hashtag.save
-      # flash[:success] = 'hashtagを投稿しました。'
       redirect_to root_url
     else
-      # @hashtags = current_user.hashtags.order(id: :desc).page(params[:page])
       @hashtags = current_user.hashtags.order(id: :desc)
       flash[:danger] = 'Please input tag using more than one character but less than 30 characters. No blank and no duplicate tag.'
       redirect_to root_url
@@ -17,16 +15,11 @@ class HashtagsController < ApplicationController
 
   def destroy
     @hashtag.destroy
-    # flash[:success] = 'hashtagを削除しました。'
     redirect_back(fallback_location: root_path)
   end
-  
-  
+
   def show
-    
   end
-  
-  
 
   private
 

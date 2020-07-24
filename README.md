@@ -1,24 +1,42 @@
-# README
+# Randomtag
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"Randomtag" is a web service that people can make favorite hashtags.
 
-Things you may want to cover:
+# DEMO
 
-* Ruby version
+You can save your favorite hashtags and make them randomly.
+Use for marketing.
 
-* System dependencies
+# Features
 
-* Configuration
+Especially, on Instagram, you will be shadowbanned if you post the same hashtags every day.
+This application helps you to prevent it.
 
-* Database creation
+# Requirement
 
-* Database initialization
+clipboard.js
 
-* How to run the test suite
+# Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+ruby 2.5.3p105 (2018-10-18 revision 65156)
+Rails 5.2.4.3
+jQuery
+Clipboard.js
 
-* Deployment instructions
 
-* ...
+# Usage
+
+Put your hashtags and click "add".
+You can save hashtags.
+After that, choose tags numbers and click random button and copy.
+
+# Author
+
+* Akinori Toma
+* ignitoma_1031@yahoo.co.jp
+
+# License
+
+"Randomtag" is under [Akinori Toma license].
+
+Enjoy making your tags!

@@ -1,14 +1,10 @@
 <div class="list-unstyled">
   <% hashtags.each do |hashtag| %>
     <div class="hogehoge mb-3">
-        <!--<div>-->
-          <span><%= hashtag.content %></span>
-        <!--</div>-->
-        <!--<div>-->
-          <% if current_user == hashtag.user %>
-            <%= link_to "X", hashtag, method: :delete,  class: 'btn2 btn-danger btn-sm' %>
-          <% end %>
-        <!--</div>-->
+      <span><%= hashtag.content %></span>
+      <% if current_user == hashtag.user %>
+        <%= link_to "X", hashtag, method: :delete,  class: 'btn2 btn-danger btn-sm' %>
+      <% end %>
     </div>
   <% end %>
 </div>

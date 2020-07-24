@@ -1,49 +1,36 @@
 <div id="wrapper">
-    <!--ボタン-->
     <div class ="button">
-        <button class="clipboard-btn btn1 btn-primary btn-sm" data-clipboard-action="copy" data-clipboard-target="#bar">
-            Copy
-        </button>
+        <button class="clipboard-btn btn1 btn-primary btn-sm" data-clipboard-action="copy" data-clipboard-target="#bar">Copy</button>
     </div>
-    <!--ボタンここまで-->
     <div class ="button2">
         <%= form_with(model: @hashtag, url: root_path, method: :get, local: true) do |f| %>
-                <%= f.submit 'RandomTag', class: 'btn1 btn-primary btn-sm' %>    
-  
-    <!--<div class = "setnumber">-->
-    <%= f.label :hashtags, "Set Number" %>
-    <%= f.select :hashtags, 1.upto(30).map{|i| [i, i]}, class:"form-control" %><br>
-    <!--</div>-->
+            <%= f.submit 'RandomTag', class: 'btn1 btn-primary btn-sm' %>    
+            <%= f.label :hashtags, "Set Number" %>
+            <%= f.select :hashtags, 1.upto(30).map{|i| [i, i]}, class:"form-control" %><br>
         <% end %>
     </div>
-    
 </div>
-            <!-- Target -->
-            
-    <div class="box2" id="bar">
-        <p><%= render 'randomtags/randomtags', randomtags: @randomtags %></p>
-    </div>
-            <!-- Trigger -->
-  
-    <div class="mytags">
-          <div class="mytag">
-            <h3>My Tag</h3>
-          </div>
-      <div class="mytag">
-        <%= form_with(model: @hashtag, local: true) do |f| %>
-         <div class = "addtag">
-          <%= f.submit 'Add Tag'%>
-         </div> 
-          <!--<div class="form-group">-->
-          <div class = "textarea">
-            <%= f.text_field :content %>
-          </div>    
-          <!--</div>-->
-        <% end %>
-      </div>
-    </div>
 
-     <div class="box3">
-      <%= render 'hashtags/hashtags', hashtags: @hashtags %>
-     </div> 
- 
+<div class="box2" id="bar">
+    <p><%= render 'randomtags/randomtags', randomtags: @randomtags %></p>
+</div>
+
+<div class="mytags">
+  <div class="mytag">
+    <h3>My Tag</h3>
+  </div>
+  <div class="mytag">
+    <%= form_with(model: @hashtag, local: true) do |f| %>
+        <div class = "addtag">
+            <%= f.submit 'Add Tag'%>
+        </div> 
+        <div class = "textarea">
+            <%= f.text_field :content %>
+        </div>    
+    <% end %>
+  </div>
+</div>
+
+<div class="box3">
+  <%= render 'hashtags/hashtags', hashtags: @hashtags %>
+</div> 
